@@ -1,0 +1,1 @@
+sed -e 's/[^[:alpha:]]/ /g' $1 | tr '\n' " " | tr -s " " | tr " " '\n'| tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr | head -n 10
